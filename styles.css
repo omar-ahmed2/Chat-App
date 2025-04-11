@@ -1227,6 +1227,43 @@ body.has-nav {
     }
 }
 
+
+@media only screen and (max-width: 500px) {
+    .messages-container {
+        padding: 5px; /* Reduce padding for smaller screens */
+        font-size: 12px; /* Adjust font size for better readability */
+    }
+
+    .login-container {
+        padding: 10px; /* Adjust padding for login container */
+    }
+
+    .input-group input {
+        font-size: 14px; /* Make input text larger */
+    }
+
+    .chat-header {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .chat-actions button {
+        font-size: 12px; /* Smaller buttons */
+    }
+
+    .sidebar {
+        display: none; /* Hide sidebar on very small screens */
+    }
+
+    .mobile-nav {
+        display: flex; /* Show mobile navigation */
+    }
+
+    .center-area {
+        padding: 5px; /* Reduce padding in the center area */
+    }
+}
+
 /* Page Transitions */
 .page-transition {
     position: fixed;
