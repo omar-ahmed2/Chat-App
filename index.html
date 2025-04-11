@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="website icon"  type="png" href="slack.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chatty</title>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-screen">
+        <div class="loading-animation">
+            <div class="loading-lines"></div>
+            <div class="chat-bubble center"></div>
+            <div class="chat-bubble"></div>
+            <div class="chat-bubble"></div>
+            <div class="chat-bubble"></div>
+            <div class="chat-bubble"></div>
+            <div class="loading-text">Loading</div>
+        </div>
+    </div>
+
+    <!-- Login Page -->
+    <div class="login-container" id="loginPage">
+        <div class="login-box">
+            <div class="login-header">
+                <h1>Welcome to Chatty</h1>
+                <p>Please login to continue</p>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Email or Username" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+            <li class="mobile-nav-item active" data-page="messages">
+                <i class="fas fa-comments"></i>
+                <span>Chats</span>
+            </li>
+            <li class="mobile-nav-item" data-page="groups">
+                <i class="fas fa-users"></i>
+                <span>Groups</span>
+            </li>
+            <li class="mobile-nav-item" data-page="favorites">
+                <i class="fas fa-star"></i>
+                <span>Favorites</span>
+            </li>
+            <li class="mobile-nav-item" data-page="calendar">
+                <i class="fas fa-calendar"></i>
+                <span>Calendar</span>
+            </li>
+            <li class="mobile-nav-item" data-page="files">
+                <i class="fas fa-folder"></i>
+                <span>Files</span>
+            </li>
+            <li class="mobile-nav-item" data-page="settings">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Chat Interface -->
+    <div class="chat-container" id="chatPage">
+        <!-- Left Sidebar -->
+        <div class="sidebar left-sidebar">
+            <div class="sidebar-header">
+                <div class="profile">
+                    <img src="slack.png" alt="Profile" class="profile-img">
+                    <span class="profile-name">Chatty</span>
+                </div>
+                <button class="collapse-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active" data-page="messages">
+                        <i class="fas fa-comment"></i>
+                        <span>Messages</span>
+                    </li>
+                    <li data-page="groups">
+                        <i class="fas fa-users"></i>
+                        <span>Groups</span>
+                    </li>
+                    <li data-page="favorites">
+                        <i class="fas fa-star"></i>
+                        <span>Favorites</span>
+                    </li>
+                    <li data-page="calendar">
+                        <i class="fas fa-calendar"></i>
+                        <span>Calendar</span>
+                    </li>
+                    <li data-page="files">
+                        <i class="fas fa-folder"></i>
+                        <span>Files</span>
+                    </li>
+                    <li data-page="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Settings</span>
+                    </li>
+                    <!-- New Chats icon for mobile/tablet -->
+                    <li class="mobile-chats" data-page="chats">
+                        <i class="fas fa-comments"></i>
+                        <span>Chats</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Center Area -->
+        <div class="center-area">
+            <!-- Messages Page -->
+            <div class="chat-area page-content active" id="messages-page">
+                <div class="chat-header">
+                    <!-- Back button for mobile -->
+                    <button class="back-to-chats">
+                        <i class="fas fa-arrow-left"></i>
+                        <span>Back</span>
+                    </button>
+                    <div class="chat-info">
+                        <img src="woman.png" alt="User" class="chat-user-img">
+                        <div class="chat-user-info">
+                            <h3>Nistio Team</h3>
+                            <p class="typing-status">online</p>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <button><i class="fas fa-star"></i></button>
+                        <button><i class="fas fa-search"></i></button>
+                        <button><i class="fas fa-video"></i></button>
+                        <button><i class="fas fa-phone"></i></button>
+                    </div>
+                </div>
+                <div class="messages-container" id="messagesContainer">
+                    <!-- Messages will be added here dynamically -->
+                </div>
+                <div class="message-input">
+                    <div class="input-actions">
+                        <button><i class="fas fa-paperclip"></i></button>
+                        <button><i class="fas fa-smile"></i></button>
+                    </div>
+                    <input type="text" placeholder="Type a message..." id="messageInput">
+                    <button class="send-btn"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </div>
+
+            <!-- Groups Page -->
+            <div class="page-content" id="groups-page">
+                <div class="page-header">
+                    <h2>Groups</h2>
+                    <p>Your group conversations</p>
+                </div>
+                <div class="groups-grid">
+                    <!-- Groups will be added here dynamically -->
+                </div>
+            </div>
+
+            <!-- Favorites Page -->
+            <div class="page-content" id="favorites-page">
+                <div class="page-header">
+                    <h2>Favorites</h2>
+                    <p>Your favorite messages and contacts</p>
+                </div>
+                <div class="favorites-list">
+                    <!-- Favorites will be added here dynamically -->
+                </div>
+            </div>
+
+            <!-- Calendar Page -->
+            <div id="calendar-page" class="page-content">
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <button class="calendar-nav"><i class="fas fa-chevron-left"></i></button>
+                        <h3>April 2024</h3>
+                        <button class="calendar-nav"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <span>Sun</span>
+                        <span>Mon</span>
+                        <span>Tue</span>
+                        <span>Wed</span>
+                        <span>Thu</span>
+                        <span>Fri</span>
+                        <span>Sat</span>
+                    </div>
+                    <div class="calendar-days"></div>
+                    <div class="calendar-events">
+                        <h4>Events</h4>
+                        <div class="events-list"></div>
+                    </div>
+                    <div class="add-event-section">
+                        <button class="add-event-btn">
+                            <i class="fas fa-plus"></i> Add Event
+                        </button>
+                    </div>
+                </div>
+                <!-- Add Event Modal -->
+                <div class="event-modal" id="eventModal">
+                    <div class="event-modal-content">
+                        <div class="event-modal-header">
+                            <h3>Add New Event</h3>
+                            <p>Enter event details below</p>
+                        </div>
+                        <form class="event-form" id="eventForm">
+                            <div class="event-form-group">
+                                <label>Event Title</label>
+                                <input type="text" id="eventTitle" required>
+                            </div>
+                            <div class="event-form-group">
+                                <label>Event Time</label>
+                                <input type="time" id="eventTime" required>
+                            </div>
+                            <div class="event-modal-actions">
+                                <button type="button" class="event-modal-btn cancel" id="cancelEventBtn">Cancel</button>
+                                <button type="submit" class="event-modal-btn submit">Add Event</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Files Page -->
+            <div class="page-content" id="files-page">
+                <div class="page-header">
+                    <h2>Files</h2>
+                    <p>Your shared files and documents</p>
+                </div>
+                <div class="files-container">
+                    <div class="files-actions">
+                        <div class="files-search">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Search files...">
+                        </div>
+                        <input type="file" id="fileUpload" class="file-upload-input" multiple>
+                        <button class="upload-btn" onclick="document.getElementById('fileUpload').click()">
+                            <i class="fas fa-upload"></i>
+                            Upload File
+                        </button>
+                    </div>
+                    <div class="files-grid">
+                        <!-- Files will be added dynamically -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Settings Page -->
+            <div id="settings-page" class="page-content">
+                <div class="settings-container">
+                    <div class="settings-section profile-section">
+                        <h3>Profile Settings</h3>
+                        <div class="profile-settings">
+                            <div class="profile-photo">
+                                <img src="man.png" alt="Profile" class="settings-avatar">
+                                <button class="change-photo-btn">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                            <div class="profile-form">
+                                <div class="form-group">
+                                    <label>Display Name</label>
+                                    <input type="text" value="John Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="email" value="john@example.com">
+                                </div>
+                                <div class="form-group">
+                                    <label>Bio</label>
+                                    <textarea>UI/UX Designer & Developer</textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Appearance</h3>
+                        <div class="settings-options">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Font Size</h4>
+                                    <p>Choose your preferred text size</p>
+                                </div>
+                                <div class="custom-select">
+                                    <select id="fontSizeSelect" class="font-size-select">
+                                        <option value="small">Small</option>
+                                        <option value="medium" selected>Medium</option>
+                                        <option value="large">Large</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Dark Mode</h4>
+                                    <p>Switch to dark theme</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" id="darkModeToggle">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section">
+                        <h3>Notifications</h3>
+                        <div class="settings-options">
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Message Notifications</h4>
+                                    <p>Get notified when you receive messages</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" id="messageNotifications" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <div class="setting-item">
+                                <div class="setting-info">
+                                    <h4>Sound</h4>
+                                    <p>Play sound for new messages</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" id="soundNotifications" checked>
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chats Page (Mobile/Tablet) -->
+            <div id="chats-page" class="page-content">
+                <div class="page-header">
+                    <div class="header-content">
+                        <h2>Chats</h2>
+                        <p>Your conversations</p>
+                    </div>
+                </div>
+                
+                <div class="chats-list">
+                    <!-- Chat items will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="sidebar right-sidebar">
+            <div class="contacts-header">
+                <h3>Messages</h3>
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="contacts-list">
+                <!-- Contacts will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
