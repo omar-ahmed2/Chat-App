@@ -1305,70 +1305,21 @@ body.has-nav {
         text-align: center; /* Center align text */
     }
 
-    /* Chat Header Styles */
-    .chat-header {
-        font-size: 18px; /* Adjust header font size */
-        margin-bottom: 10px; /* Space below header */
-    }
-
-    /* Chat Input Styles */
-    .chat-input {
-        display: flex; /* Use flexbox for layout */
-        flex-direction: column; /* Stack elements vertically */
-        width: 100%; /* Full width */
-        padding: 5px; /* Reduce padding */
-        align-items: center; /* Center align items */
-    }
-
-    .chat-input textarea {
-        width: 100%; /* Full width for textarea */
-        height: 40px; /* Set a fixed height */
-        font-size: 14px; /* Adjust font size */
-        padding: 5px; /* Padding inside textarea */
-        border-radius: 5px; /* Rounded corners */
-        border: 1px solid #ccc; /* Border style */
-        resize: none; /* Prevent resizing */
-        margin-bottom: 5px; /* Space below textarea */
-    }
-
-    .chat-input button {
-        font-size: 14px; /* Adjust button font size */
-        padding: 8px; /* Padding for button */
-        border-radius: 5px; /* Rounded corners */
-        width: 100%; /* Full width for button */
-    }
-
-    /* Settings Page Styles */
+    /* Settings Profile Styles */
     .settings-container {
-        padding: 10px; /* Reduce padding */
         display: flex;
         flex-direction: column; /* Stack elements vertically */
         align-items: center; /* Center align items */
-        overflow: hidden; /* Prevent overflow */
+        padding: 10px; /* Reduce padding */
     }
 
     .settings-input {
-        width: 100%; /* Full width for inputs */
+        width: 90%; /* Full width for inputs */
         margin-bottom: 10px; /* Space between inputs */
         padding: 10px; /* Padding for inputs */
         font-size: 14px; /* Adjust font size */
         border-radius: 5px; /* Rounded corners */
         border: 1px solid #ccc; /* Border style */
-    }
-
-    .settings-button {
-        padding: 10px; /* Padding for button */
-        font-size: 14px; /* Adjust button font size */
-        border-radius: 5px; /* Rounded corners */
-        width: 100%; /* Full width for button */
-    }
-
-    /* Profile Photo and Display Name */
-    .profile-settings {
-        display: flex;
-        flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center align items */
-        margin-bottom: 10px; /* Space below profile section */
     }
 
     .profile-photo {
@@ -1378,9 +1329,38 @@ body.has-nav {
         margin-bottom: 10px; /* Space below photo */
     }
 
-    .display-name {
-        font-size: 16px; /* Adjust font size for display name */
-        margin-bottom: 5px; /* Space below display name */
+    /* Chat Page Styles */
+    .chat-header {
+        text-align: center; /* Center align header */
+        font-size: 18px; /* Adjust header font size */
+        margin-bottom: 10px; /* Space below header */
+    }
+
+    .chat-input {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack elements vertically */
+        width: 100%; /* Full width */
+        padding: 5px; /* Reduce padding */
+        align-items: center; /* Center align items */
+    }
+
+    .chat-input textarea {
+        width: 85%; /* Full width for textarea */
+        height: 40px; /* Set a fixed height */
+        font-size: 14px; /* Adjust font size */
+        padding: 5px; /* Padding inside textarea */
+        border-radius: 5px; /* Rounded corners */
+        border: 1px solid #ccc; /* Border style */
+        resize: none; /* Prevent resizing */
+        overflow: hidden; /* Prevent overflow */
+    }
+
+    .chat-input button {
+        margin-top: 5px; /* Space between textarea and button */
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px; /* Padding for button */
+        border-radius: 5px; /* Rounded corners */
+        width: 85%; /* Full width for button */
     }
 }
 
