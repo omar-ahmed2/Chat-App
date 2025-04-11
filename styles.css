@@ -1362,6 +1362,9 @@ body.has-nav {
         border-radius: 5px; /* Rounded corners */
         width: 85%; /* Full width for button */
     }
+
+    .message-input input {
+        width: 80%;
 }
 
 /* Page Transitions */
