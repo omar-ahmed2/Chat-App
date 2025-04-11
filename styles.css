@@ -1302,6 +1302,13 @@ body.has-nav {
         border-radius: 8px; /* Rounded corners for cards */
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
         overflow: hidden; /* Prevent overflow */
+        text-align: center; /* Center align text */
+    }
+
+    /* Chat Header Styles */
+    .chat-header {
+        font-size: 18px; /* Adjust header font size */
+        margin-bottom: 10px; /* Space below header */
     }
 
     /* Chat Input Styles */
@@ -1310,6 +1317,7 @@ body.has-nav {
         flex-direction: column; /* Stack elements vertically */
         width: 100%; /* Full width */
         padding: 5px; /* Reduce padding */
+        align-items: center; /* Center align items */
     }
 
     .chat-input textarea {
@@ -1320,33 +1328,14 @@ body.has-nav {
         border-radius: 5px; /* Rounded corners */
         border: 1px solid #ccc; /* Border style */
         resize: none; /* Prevent resizing */
+        margin-bottom: 5px; /* Space below textarea */
     }
 
     .chat-input button {
-        margin-top: 5px; /* Space between textarea and button */
         font-size: 14px; /* Adjust button font size */
         padding: 8px; /* Padding for button */
         border-radius: 5px; /* Rounded corners */
-    }
-
-    /* Calendar Page Styles */
-    .calendar-container {
-        padding: 10px; /* Reduce padding */
-        display: flex;
-        flex-direction: column; /* Stack elements vertically */
-        overflow: hidden; /* Prevent overflow */
-    }
-
-    .calendar-header {
-        font-size: 16px; /* Adjust header font size */
-        text-align: center; /* Center align header */
-    }
-
-    .calendar-day {
-        width: 100%; /* Full width for each day */
-        padding: 5px; /* Padding for each day */
-        font-size: 12px; /* Adjust font size */
-        overflow: hidden; /* Prevent overflow */
+        width: 100%; /* Full width for button */
     }
 
     /* Settings Page Styles */
@@ -1354,6 +1343,7 @@ body.has-nav {
         padding: 10px; /* Reduce padding */
         display: flex;
         flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
         overflow: hidden; /* Prevent overflow */
     }
 
@@ -1370,6 +1360,27 @@ body.has-nav {
         padding: 10px; /* Padding for button */
         font-size: 14px; /* Adjust button font size */
         border-radius: 5px; /* Rounded corners */
+        width: 100%; /* Full width for button */
+    }
+
+    /* Profile Photo and Display Name */
+    .profile-settings {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align items */
+        margin-bottom: 10px; /* Space below profile section */
+    }
+
+    .profile-photo {
+        width: 80px; /* Set a fixed width for profile photo */
+        height: 80px; /* Set a fixed height for profile photo */
+        border-radius: 50%; /* Make it circular */
+        margin-bottom: 10px; /* Space below photo */
+    }
+
+    .display-name {
+        font-size: 16px; /* Adjust font size for display name */
+        margin-bottom: 5px; /* Space below display name */
     }
 }
 
