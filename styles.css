@@ -1227,40 +1227,70 @@ body.has-nav {
     }
 }
 
-
+/* Add this to your styles.css */
 @media only screen and (max-width: 500px) {
-    .messages-container {
-        padding: 5px; /* Reduce padding for smaller screens */
-        font-size: 12px; /* Adjust font size for better readability */
-    }
-
-    .login-container {
-        padding: 10px; /* Adjust padding for login container */
-    }
-
-    .input-group input {
-        font-size: 14px; /* Make input text larger */
-    }
-
-    .chat-header {
+    /* Chat Input Styles */
+    .chat-input {
+        display: flex; /* Use flexbox for layout */
         flex-direction: column; /* Stack elements vertically */
-        align-items: flex-start; /* Align items to the start */
+        width: 100%; /* Full width */
+        padding: 5px; /* Reduce padding */
     }
 
-    .chat-actions button {
-        font-size: 12px; /* Smaller buttons */
+    .chat-input textarea {
+        width: 100%; /* Full width for textarea */
+        height: 50px; /* Set a fixed height */
+        font-size: 14px; /* Adjust font size */
+        padding: 5px; /* Padding inside textarea */
+        border-radius: 5px; /* Rounded corners */
+        border: 1px solid #ccc; /* Border style */
     }
 
-    .sidebar {
-        display: none; /* Hide sidebar on very small screens */
+    .chat-input button {
+        margin-top: 5px; /* Space between textarea and button */
+        font-size: 14px; /* Adjust button font size */
+        padding: 10px; /* Padding for button */
+        border-radius: 5px; /* Rounded corners */
     }
 
-    .mobile-nav {
-        display: flex; /* Show mobile navigation */
+    /* Calendar Page Styles */
+    .calendar-container {
+        padding: 10px; /* Reduce padding */
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
     }
 
-    .center-area {
-        padding: 5px; /* Reduce padding in the center area */
+    .calendar-header {
+        font-size: 16px; /* Adjust header font size */
+        text-align: center; /* Center align header */
+    }
+
+    .calendar-day {
+        width: 100%; /* Full width for each day */
+        padding: 5px; /* Padding for each day */
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* Settings Page Styles */
+    .settings-container {
+        padding: 10px; /* Reduce padding */
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .settings-input {
+        width: 100%; /* Full width for inputs */
+        margin-bottom: 10px; /* Space between inputs */
+        padding: 10px; /* Padding for inputs */
+        font-size: 14px; /* Adjust font size */
+        border-radius: 5px; /* Rounded corners */
+        border: 1px solid #ccc; /* Border style */
+    }
+
+    .settings-button {
+        padding: 10px; /* Padding for button */
+        font-size: 14px; /* Adjust button font size */
+        border-radius: 5px; /* Rounded corners */
     }
 }
 
